@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ina.weatherapp.MainActivity"
+    android:background="#ff1ba1ee">
+
+    <TextView
+        android:id="@+id/cityText"
+        android:textColor="#fff"
+        android:text="Spokane, US"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"/>
+
+    <ImageView
+        android:id="@+id/thumbnailIcon"
+        android:layout_below="@id/cityText"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:background="#fff"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+    
+    <TextView
+        android:id="@+id/tempText"
+        android:text="12 Deg"
+        android:textStyle="normal"
+        android:textColor="#fff"
+        android:layout_below="@id/cityText"
+        android:textSize="42sp"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/windText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:text="Wind"
+        android:layout_below="@id/thumbnailIcon"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:id="@+id/cloudText"
+        android:textColor="#fff"
+        android:layout_below="@id/windText"
+        android:layout_marginTop="5dp"
+        android:textSize="16sp"
+        android:text="Cloud"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/pressureText"
+        android:textSize="16sp"
+        android:textColor="#fff"
+        android:layout_marginTop="5dp"
+        android:text="Pressure"
+        android:layout_below="@id/cloudText"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/humidText"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:text="Humidity"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/pressureText"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/riseText"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@id/humidText"
+        android:text="Sunrise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/setText"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:text="Sunset"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/riseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/updateText"
+        android:text="Last Update"
+        android:layout_centerHorizontal="true"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:layout_below="@id/setText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
