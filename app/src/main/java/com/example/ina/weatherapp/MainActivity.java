@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView cityName;
     private TextView temp;
-    private ImageView iconView;
     private TextView description;
     private TextView humidity;
     private TextView pressure;
@@ -60,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         cityName = findViewById(R.id.cityText);
-        iconView = findViewById(R.id.thumbnailIcon);
         temp = findViewById(R.id.tempText);
         description = findViewById(R.id.cloudText);
         humidity = findViewById(R.id.humidText);
@@ -93,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Bitmap bitmap) {
-            iconView.setImageBitmap(bitmap);
+
 //            super.onPostExecute(bitmap);
         }
 
@@ -157,11 +155,11 @@ public class MainActivity extends AppCompatActivity {
             DateFormat df = DateFormat.getTimeInstance();
             long dvsunrise = Long.valueOf(weather.place.getSunrise())*1000;
             Date dfsunrise = new java.util.Date(dvsunrise);
-            String sunriseValue = new SimpleDateFormat("hh:mm:a").format(dfsunrise);
+            String sunriseValue = new SimpleDateFormat("hh:mm a").format(dfsunrise);
 
             long dvsunset = Long.valueOf(weather.place.getSunset())*1000;
             Date dfsunset = new java.util.Date(dvsunset);
-            String sunsetValue = new SimpleDateFormat("hh:mm:a").format(dfsunset);
+            String sunsetValue = new SimpleDateFormat("hh:mm a").format(dfsunset);
 
 
             String updateDate = df.format(new Date(weather.place.getLastupdate()));
@@ -173,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
             cityName.setText(weather.place.getCity() + ", " + weather.place.getCountry());
             temp.setText("" + tempFormat + "°C");
             humidity.setText("Humidity: " + weather.currentCondition.getHumidity() + "%");
-            pressure.setText("Pressure: " + weather.currentCondition.getPressure() + "hPa");
+            pressure.setText("Pressure: " + weather.currentCondition.getPressure() + " hPa");
             wind.setText("Wind: " + weather.wind.getSpeed() + " km/h");
             sunrise.setText("Sunrise: " + sunriseValue);
             sunset.setText("Sunset: " + sunsetValue);
